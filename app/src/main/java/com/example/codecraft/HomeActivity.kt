@@ -5,11 +5,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class HomeActivity : AppCompatActivity() {
+
+    private var username: String = "John Doe" // Example, replace with actual user data
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,18 +23,34 @@ class HomeActivity : AppCompatActivity() {
         val btnCertificates = findViewById<Button>(R.id.btnCertificates)
         val btnLogout = findViewById<Button>(R.id.btnLogout)
 
+        // Open CoursesActivity with user data
         btnCourses.setOnClickListener {
-            Toast.makeText(this, "Opening Courses...", Toast.LENGTH_SHORT).show()
-        }
-
-        btnCertificates.setOnClickListener {
-            Toast.makeText(this, "Opening Certificates...", Toast.LENGTH_SHORT).show()
-        }
-
-        btnLogout.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, CoursesActivity::class.java)
+            intent.putExtra("username", username)  // Passing data
             startActivity(intent)
-            finish()
+        }
+
+        // Open CertificatesActivity with user data
+        btnCertificates.setOnClickListener {
+            val intent = Intent(this, CertificatesActivity::class.java)
+            intent.putExtra("username", username)  // Passing data
+            startActivity(intent)
+        }
+
+        // Logout with confirmation dialog
+        btnLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to logout?")
+                .setPositiveButton("Yes") { _, _ ->
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("No", null)
+                .show()
         }
     }
 }
+
+

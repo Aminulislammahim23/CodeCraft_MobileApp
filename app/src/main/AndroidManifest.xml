@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeCraft">
         <activity
+            android:name=".CertificatesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoursesActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
