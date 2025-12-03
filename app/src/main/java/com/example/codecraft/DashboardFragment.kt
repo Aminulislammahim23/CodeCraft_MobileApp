@@ -37,22 +37,25 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
         }
 
         binding.navCourses.setOnClickListener {
+            // CORRECTED: Use the actual container ID from your Activity's layout
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, CoursesFragment())
+                .replace(R.id.fragment_container, CoursesFragment()) // Use the container ID
                 .addToBackStack(null)
                 .commit()
         }
 
         binding.navFavorites.setOnClickListener {
+            // CORRECTED: Use the actual container ID from your Activity's layout
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, FavoritesFragment())
+                .replace(R.id.fragment_container, FavoritesFragment()) // Use the container ID
                 .addToBackStack(null)
                 .commit()
         }
 
         binding.navProfile.setOnClickListener {
+            // CORRECTED: Use the actual container ID from your Activity's layout
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, ProfileFragment())
+                .replace(R.id.fragment_container, ProfileFragment()) // Use the container ID
                 .addToBackStack(null)
                 .commit()
         }
@@ -66,9 +69,9 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
     private fun resetTabColors() {
         binding.btnAll.setBackgroundColor(0xFF2D2F33.toInt())
-        binding.btnBeginner.setBackgroundColor(0xFF2D2F33.toInt())
-        binding.btnIntermediate.setBackgroundColor(0xFF2D2F33.toInt())
-        binding.btnAdvanced.setBackgroundColor(0xFF2D2F33.toInt())
+        binding.btnBeginner.setBackgroundColor(0xFF2D2D2D.toInt())
+        binding.btnIntermediate.setBackgroundColor(0xFF2D2D2D.toInt())
+        binding.btnAdvanced.setBackgroundColor(0xFF2D2D2D.toInt())
     }
 
     override fun onDestroyView() {

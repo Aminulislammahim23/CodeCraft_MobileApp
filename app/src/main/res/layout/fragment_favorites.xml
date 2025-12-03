@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#101214">
@@ -28,12 +29,13 @@
 
             <!-- Favorite Course Card Example 1 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/favCourseCard1"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginBottom="16dp"
+                android:backgroundTint="#1E1F22"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="8dp"
-                android:backgroundTint="#1E1F22">
+                app:cardElevation="8dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -46,16 +48,16 @@
                         android:layout_height="80dp"
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_course"
-                        android:contentDescription="Course Image" />
+                        android:contentDescription="Course Image"
+                        android:src="@android:drawable/ic_menu_slideshow" />
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/favCourseImg1"
+                        android:layout_centerVertical="true"
                         android:layout_marginStart="16dp"
-                        android:layout_centerVertical="true">
+                        android:layout_toEndOf="@id/favCourseImg1"
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/favCourseTitle1"
@@ -64,38 +66,39 @@
                             android:text="Kotlin Basics"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/favCourseDesc1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
                             android:text="Learn the fundamentals of Kotlin"
                             android:textColor="#AAAAAA"
-                            android:textSize="14sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="14sp" />
 
                         <ProgressBar
                             style="@android:style/Widget.Material.ProgressBar.Horizontal"
                             android:layout_width="120dp"
                             android:layout_height="6dp"
                             android:layout_marginTop="8dp"
-                            android:progress="50"
-                            android:progressTint="#4CAF50"
                             android:backgroundTint="#2D2F33"
-                            android:indeterminate="false"/>
+                            android:indeterminate="false"
+                            android:progress="50"
+                            android:progressTint="#4CAF50" />
                     </LinearLayout>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Favorite Course Card Example 2 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/favCourseCard2"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginBottom="16dp"
+                android:backgroundTint="#1E1F22"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="8dp"
-                android:backgroundTint="#1E1F22">
+                app:cardElevation="8dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -108,16 +111,16 @@
                         android:layout_height="80dp"
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_course"
-                        android:contentDescription="Course Image" />
+                        android:contentDescription="Course Image"
+                        android:src="@android:drawable/ic_menu_slideshow" />
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/favCourseImg2"
+                        android:layout_centerVertical="true"
                         android:layout_marginStart="16dp"
-                        android:layout_centerVertical="true">
+                        android:layout_toEndOf="@id/favCourseImg2"
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/favCourseTitle2"
@@ -126,26 +129,26 @@
                             android:text="Advanced Android"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/favCourseDesc2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
                             android:text="Jetpack Compose and Architecture"
                             android:textColor="#AAAAAA"
-                            android:textSize="14sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="14sp" />
 
                         <ProgressBar
                             style="@android:style/Widget.Material.ProgressBar.Horizontal"
                             android:layout_width="120dp"
                             android:layout_height="6dp"
                             android:layout_marginTop="8dp"
-                            android:progress="80"
-                            android:progressTint="#4CAF50"
                             android:backgroundTint="#2D2F33"
-                            android:indeterminate="false"/>
+                            android:indeterminate="false"
+                            android:progress="80"
+                            android:progressTint="#4CAF50" />
                     </LinearLayout>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -174,7 +177,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:src="@drawable/ic_home"
+                android:src="@android:drawable/ic_dialog_info"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
 
@@ -194,7 +197,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:src="@drawable/ic_courses"
+                android:src="@android:drawable/ic_menu_slideshow"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
 
@@ -214,7 +217,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:src="@drawable/ic_favorite"
+                android:src="@android:drawable/btn_star"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
 
@@ -234,7 +237,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:src="@drawable/ic_profile"
+                android:src="@android:drawable/ic_menu_myplaces"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
 

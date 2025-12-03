@@ -6,33 +6,34 @@
 
     <!-- MAIN SCROLL CONTENT -->
     <ScrollView
+        android:id="@+id/dashboardScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="70dp">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <!-- HEADER -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
+                android:background="@drawable/dashboard_header_bg"
                 android:gravity="center_vertical"
-                android:padding="24dp"
-                android:background="@drawable/dashboard_header_bg">
+                android:padding="24dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_marginBottom="4dp"
                         android:text="Welcome back!"
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp"
-                        android:layout_marginBottom="4dp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:text="CodeCraft Dashboard"
@@ -50,16 +51,19 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <include layout="@layout/item_stat_card"
-                    android:id="@+id/cardCompleted" />
+                <include
+                    android:id="@+id/cardCompleted"
+                    layout="@layout/item_stat_card" />
 
-                <include layout="@layout/item_stat_card"
+                <include
                     android:id="@+id/cardProgress"
-                    android:layout_marginStart="10dp"/>
+                    layout="@layout/item_stat_card"
+                    android:layout_marginStart="10dp" />
 
-                <include layout="@layout/item_stat_card"
+                <include
                     android:id="@+id/cardTotal"
-                    android:layout_marginStart="10dp"/>
+                    layout="@layout/item_stat_card"
+                    android:layout_marginStart="10dp" />
             </LinearLayout>
 
             <!-- FILTER CHIPS -->
@@ -70,36 +74,36 @@
                 android:scrollbars="none">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnAll"
-                        android:text="All"
                         android:background="@drawable/filter_chip_bg"
-                        android:textColor="#FFFFFF"/>
+                        android:text="All"
+                        android:textColor="#FFFFFF" />
 
                     <Button
                         android:id="@+id/btnBeginner"
-                        android:text="Beginner"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/filter_chip_bg"
-                        android:textColor="#FFFFFF"
-                        android:layout_marginStart="10dp"/>
+                        android:text="Beginner"
+                        android:textColor="#FFFFFF" />
 
                     <Button
                         android:id="@+id/btnIntermediate"
-                        android:text="Intermediate"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/filter_chip_bg"
-                        android:textColor="#FFFFFF"
-                        android:layout_marginStart="10dp"/>
+                        android:text="Intermediate"
+                        android:textColor="#FFFFFF" />
 
                     <Button
                         android:id="@+id/btnAdvanced"
-                        android:text="Advanced"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/filter_chip_bg"
-                        android:textColor="#FFFFFF"
-                        android:layout_marginStart="10dp"/>
+                        android:text="Advanced"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -107,22 +111,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
                 android:text="Your Learning Journey"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold"
                 android:textSize="18sp"
-                android:padding="16dp"/>
+                android:textStyle="bold" />
 
             <!-- EMPTY MESSAGE OR RECYCLER -->
             <TextView
                 android:id="@+id/tvEmpty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No Lessons Available"
-                android:textColor="#AAAAAA"
                 android:gravity="center"
                 android:padding="40dp"
-                android:textSize="16sp"/>
+                android:text="No Lessons Available"
+                android:textColor="#AAAAAA"
+                android:textSize="16sp" />
 
         </LinearLayout>
     </ScrollView>

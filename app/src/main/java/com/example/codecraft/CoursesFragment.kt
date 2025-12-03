@@ -14,27 +14,31 @@ class CoursesFragment : Fragment(R.layout.fragment_courses) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentCoursesBinding.bind(view)
 
+        // Use requireActivity().supportFragmentManager to perform transactions
+        val fragmentManager = requireActivity().supportFragmentManager
+
         // Bottom Nav Clicks
         binding.navHome.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, DashboardFragment())
+            fragmentManager.beginTransaction()
+                // The container ID from the Activity's layout is used here
+                .replace(R.id.fragment_container, DashboardFragment())
                 .commit()
         }
 
         binding.navCourses.setOnClickListener {
-            // Already on Courses
+            // Already on Courses, no action needed
         }
 
         binding.navFavorites.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, FavoritesFragment())
+            fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, FavoritesFragment())
                 .addToBackStack(null)
                 .commit()
         }
 
         binding.navProfile.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, ProfileFragment())
+            fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ProfileFragment())
                 .addToBackStack(null)
                 .commit()
         }
