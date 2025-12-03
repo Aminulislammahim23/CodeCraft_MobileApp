@@ -33,7 +33,7 @@ class LoginFragment : Fragment() {
 
                 // Navigate to Dashboard
                 (activity as MainActivity).supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainer, DashboardFragment())
+                    .replace(R.id.fragment_container, DashboardFragment())
                     .addToBackStack(null)
                     .commit()
 

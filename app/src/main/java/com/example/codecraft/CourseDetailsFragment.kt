@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.codecraft.databinding.FragmentCourseDetailsBinding // You will need to create this layout file
+import com.example.codecraft.databinding.FragmentCourseDetailsBinding
 
 class CourseDetailsFragment : Fragment() {
 

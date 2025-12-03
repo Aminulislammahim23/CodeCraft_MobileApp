@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         // Load LoginFragment first
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, LoginFragment())
+                .replace(R.id.fragment_container, LoginFragment())
                 .commit()
         }
 

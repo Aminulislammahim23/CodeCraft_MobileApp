@@ -124,6 +124,11 @@
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"/>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/signupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

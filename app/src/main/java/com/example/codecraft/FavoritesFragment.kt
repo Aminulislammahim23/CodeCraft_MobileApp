@@ -102,8 +102,7 @@ class FavoritesFragment : Fragment() {
     }
 
     private fun refreshFavorites() {
-        // Refresh favorite courses list
-        // This could be implemented to fetch updated data from ViewModel
+
     }
 
     private fun openCourseDetails(courseId: String) {
@@ -116,19 +115,13 @@ class FavoritesFragment : Fragment() {
     }
 
     private fun updateCourseProgress() {
-        // Example: Update progress bars based on user progress
-        // You would typically get this data from a ViewModel
+
         binding.favCourseProgress1.progress = 50
         binding.favCourseProgress2.progress = 80
-
-        // Update other UI elements if needed
-        // binding.favCourseTitle1.text = "Updated Title"
     }
 
-    // For updating course data from ViewModel
     fun updateCourses(courses: List<Course>) {
-        // Update UI with new course data
-        // This method can be called from ViewModel observers
+
     }
 
     override fun onDestroyView() {

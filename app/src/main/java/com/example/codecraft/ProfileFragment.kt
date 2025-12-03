@@ -42,7 +42,7 @@ class ProfileFragment : Fragment() {
         // Logout → back to login
         binding.btnLogout.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, LoginFragment())
+                .replace(R.id.fragment_container, LoginFragment())
                 .commit()
         }
     }
