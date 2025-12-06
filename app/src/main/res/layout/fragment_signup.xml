@@ -117,7 +117,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Link to Login -->
+ 
     <TextView
         android:id="@+id/tv_go_to_login"
         android:layout_width="wrap_content"

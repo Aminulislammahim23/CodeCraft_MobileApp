@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:padding="14dp"
+    android:orientation="vertical"
+    android:background="#1E1F25"
+    android:layout_marginEnd="12dp"
+    android:gravity="center"
+    android:clipToPadding="false"
+    android:backgroundTint="#26272D">
+
+    <ImageView
+        android:id="@+id/courseImage"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/course_uiux"
+        android:background="@drawable/rounded_bg"
+        android:clipToOutline="true" />
+
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course Title"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/courseDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5h 30 min"
+        android:textColor="#C3C3C3"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/courseRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.9"
+        android:textColor="#FFD700"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:id="@+id/courseReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="322 Reviews"
+        android:textColor="#B3B3B3"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

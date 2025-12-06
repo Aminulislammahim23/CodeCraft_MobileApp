@@ -9,10 +9,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Load LoginFragment first
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LoginFragment())
+                .replace(R.id.fragment_container, SplashFragment())
                 .commit()
         }
 

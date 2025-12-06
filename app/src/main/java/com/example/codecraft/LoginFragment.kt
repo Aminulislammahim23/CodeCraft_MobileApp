@@ -4,47 +4,47 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.codecraft.databinding.FragmentLoginBinding
+import com.example.codecraft.ui.dashboard.DashboardFragment
 
 class LoginFragment : Fragment() {
-
-    private var _binding: FragmentLoginBinding? = null
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_login, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val edtUsername = view.findViewById<EditText>(R.id.etUsername)
+        val edtPassword = view.findViewById<EditText>(R.id.etPassword)
+        val btnLogin = view.findViewById<Button>(R.id.btnLogin)
+        val btnGuest = view.findViewById<Button>(R.id.btnGuest)
 
-        binding.btnLogin.setOnClickListener {
-            val username = binding.etUsername.text.toString()
-            val password = binding.etPassword.text.toString()
 
-            if (username == "admin" && password == "1234") {
-                Toast.makeText(requireContext(), "Login Successful", Toast.LENGTH_SHORT).show()
+        btnLogin.setOnClickListener {
+            val username = edtUsername.text.toString().trim()
+            val password = edtPassword.text.toString().trim()
 
-                // Navigate to Dashboard
-                (activity as MainActivity).supportFragmentManager.beginTransaction()
+            if (username == "a" && password == "a") {
+                parentFragmentManager.beginTransaction()
                     .replace(R.id.fragment_container, DashboardFragment())
                     .addToBackStack(null)
                     .commit()
-
             } else {
-                Toast.makeText(requireContext(), "Invalid Credentials", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Invalid username or password", Toast.LENGTH_SHORT).show()
             }
         }
-    }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        btnGuest.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container,HomepageFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        return view
     }
 }

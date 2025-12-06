@@ -32,6 +32,7 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="60dp"
                 android:background="#FFFFFF"
+                android:src="@drawable/ic_logo"
                 android:contentDescription="App Logo"/>
 
 
@@ -50,10 +51,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:gravity="center"
+                android:paddingHorizontal="16dp"
                 android:text="Please log in to continue and get the best from our app"
-                android:textColor="#AAAAAA"
-                android:textSize="14sp"
-                android:paddingHorizontal="16dp"/>
+                android:textColor="#FAFAFA"
+                android:textSize="14sp" />
 
             <!-- Login Card -->
             <LinearLayout
@@ -128,7 +129,23 @@
             <Button
                 android:id="@+id/signupBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#914CAF"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnGuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#0C0D04"
+                android:text="Login as Guest"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

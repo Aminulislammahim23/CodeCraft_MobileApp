@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.codecraft.databinding.FragmentSignupBinding
+import com.example.codecraft.ui.dashboard.DashboardFragment
 
 class SignUpFragment : Fragment() {
 
@@ -32,10 +33,9 @@ class SignUpFragment : Fragment() {
             if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(context, "Please fill out all fields", Toast.LENGTH_SHORT).show()
             } else {
-                // TODO: Implement your user registration logic here (e.g., with Firebase Authentication)
+
                 Toast.makeText(context, "Registration logic goes here", Toast.LENGTH_SHORT).show()
 
-                // For now, let's navigate to the dashboard after a successful "sign up"
                 parentFragmentManager.beginTransaction()
                     .replace(R.id.fragment_container, DashboardFragment())
                     .commit()
@@ -43,13 +43,10 @@ class SignUpFragment : Fragment() {
         }
 
         binding.tvGoToLogin.setOnClickListener {
-            // TODO: Navigate to your LoginFragment
-            // For example:
-            /*
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, LoginFragment())
                 .commit()
-            */
+
             Toast.makeText(context, "Navigate to Login Screen", Toast.LENGTH_SHORT).show()
         }
     }

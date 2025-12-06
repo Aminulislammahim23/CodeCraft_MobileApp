@@ -53,6 +53,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
 
     // Compose
     implementation("androidx.compose.ui:ui:1.9.5")
@@ -63,9 +66,20 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.9.6")
 
     // Lifecycle
-    implementation(libs.androidx.lifecycle.livedata.ktx)
+
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.gridlayout)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.fragment)
+    implementation(libs.androidx.viewpager2)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.constraintlayout)
+
+    dependencies {
+        implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.10.0")
+    }
+
+
 
     // Testing
     testImplementation(libs.junit)
