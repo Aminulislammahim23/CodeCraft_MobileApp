@@ -18,4 +18,18 @@
         android:name="com.example.codecraft.ui.profile.ProfileFragment"
         android:label="Profile" />
 
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.codecraft.SplashFragment">
+
+        <action
+            android:id="@+id/action_splashFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.codecraft.onboarding.OnboardingFragment" />
+
+
 </navigation>

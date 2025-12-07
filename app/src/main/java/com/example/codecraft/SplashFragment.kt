@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.codecraft.onboarding.OnboardingPage1Fragment
 
 class SplashFragment : Fragment() {
 
@@ -22,7 +23,7 @@ class SplashFragment : Fragment() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LoginFragment())
+                .replace(R.id.fragment_container, OnboardingPage1Fragment())
                 .commit()
         }, 3000)  // 3 seconds
     }
