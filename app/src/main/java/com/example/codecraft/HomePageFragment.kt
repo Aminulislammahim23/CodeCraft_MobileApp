@@ -95,6 +95,7 @@ class HomepageFragment : Fragment() {
         binding.navProfile.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, ProfileFragment())
+                .addToBackStack(null)
                 .commit()
         }
     }

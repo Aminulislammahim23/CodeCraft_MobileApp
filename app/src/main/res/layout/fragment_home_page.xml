@@ -55,7 +55,6 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:background="@drawable/search_bg"
-                    android:drawableLeft="@drawable/ic_search"
                     android:drawablePadding="10dp"
                     android:hint="Search"
                     android:padding="12dp" />

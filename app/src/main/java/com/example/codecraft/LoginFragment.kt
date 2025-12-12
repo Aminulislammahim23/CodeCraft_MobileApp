@@ -22,6 +22,8 @@ class LoginFragment : Fragment() {
         val edtPassword = view.findViewById<EditText>(R.id.etPassword)
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
         val btnGuest = view.findViewById<Button>(R.id.btnGuest)
+        val btnSignup = view.findViewById<Button>(R.id.btnSignup)
+
 
 
         btnLogin.setOnClickListener {
@@ -44,6 +46,14 @@ class LoginFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+
+        btnSignup.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, SignUpFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
 
         return view
     }

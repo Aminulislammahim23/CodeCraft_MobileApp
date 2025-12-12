@@ -26,28 +26,32 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnSignUp.setOnClickListener {
+
             val username = binding.etUsername.text.toString().trim()
             val email = binding.etEmail.text.toString().trim()
-            val password = binding.etPassword.text.toString()
+            val password = binding.etPassword.text.toString().trim()
 
             if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(context, "Please fill out all fields", Toast.LENGTH_SHORT).show()
-            } else {
-
-                Toast.makeText(context, "Registration logic goes here", Toast.LENGTH_SHORT).show()
-
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, DashboardFragment())
-                    .commit()
+                Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
+
+            // TODO: Save user to database or Firebase here
+            Toast.makeText(requireContext(), "Registration Successful", Toast.LENGTH_SHORT).show()
+
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, DashboardFragment())
+                .addToBackStack(null)
+                .commit()
         }
 
         binding.tvGoToLogin.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, LoginFragment())
+                .addToBackStack(null)
                 .commit()
 
-            Toast.makeText(context, "Navigate to Login Screen", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Go to Login Screen", Toast.LENGTH_SHORT).show()
         }
     }
 
